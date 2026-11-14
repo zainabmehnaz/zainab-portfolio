@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>About Me - Zainab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <button id="theme-toggle" type="button">Toggle Light/Dark Mode</button>
+
+  <header>
+    <h1>Zainab Mehnaz</h1>
+    <p id="status-banner"></p>
+    <nav>
+      <a href="#about">About</a> |
+      <a href="#skills">Skills</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <h2>About Me</h2>
+    <img src="https://i.pravatar.cc/200?img=47" alt="Photo of Zainab" width="200">
+      <p id="about-text">
+        Hi, I'm Zainab, an AI automation specialist.
+        I build voice AI agents, web scrapers, and automation systems for businesses that save 20+hr/week.
+        <span id="more-text" style="display:none"> I've worked with clients across real estate, healthcare, and e-commerce, and I'm always learning new tools to make automations faster and smarter.</span>
+      </p>
+      <button type="button" id="read-more-btn">Read More</button>
+    </section>
+
+    <section id="skills">
+      <h2>My Skills</h2>
+
+      <article>
+        <h3>Voice AI Agents</h3>
+        <p>I build phone agents that answer calls and book appointments.</p>
+      </article>
+
+      <article>
+        <h3>Web Scraping</h3>
+        <p>I collect data from websites using Python tools.</p>
+      </article>
+
+      <article>
+        <h3>Ai Automation</h3>
+        <p>I connect apps and AI tools together so tasks run automatically.</p>
+      </article>
+
+      <h3>How I Work</h3>
+      <ol type="a">
+        <li>Discover the problem</li>
+        <li>Design the workflow</li>
+        <li>Build the automation</li>
+        <li>Deploy it</li>
+        <li>Support the client</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Services Table</h2>
+
+      <div class="filter-buttons">
+        <button type="button" onclick="filterTable('all')">All</button>
+        <button type="button" onclick="filterTable('voice')">Voice AI</button>
+        <button type="button" onclick="filterTable('automation')">Automation</button>
+      </div>
+
+      <table border="1" id="menuTable">
+        <tr>
+          <th>Service</th>
+          <th>Tools</th>
+        </tr>
+        <tr class="voice">
+          <td>Voice AI Agent</td>
+          <td>Omnidimension , vapi , retell </td>
+        </tr>
+        <tr class="automation">
+          <td>Web Scraper</td>
+          <td>Python</td>
+        </tr>
+        <tr class="automation">
+          <td>Automation</td>
+          <td>n8n ,langChain, langGrpah</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Add-on Services</h2>
+      <label><input type="checkbox" class="addon" data-price="20"> Logo Design - $20</label><br>
+      <label><input type="checkbox" class="addon" data-price="15"> Extra Revision - $15</label><br>
+      <label><input type="checkbox" class="addon" data-price="30"> Priority Support - $30</label><br>
+      <p id="total">Total: $0</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>You can also find me on <a href="https://www.linkedin.com/in/zainab-mehnaz-59b772292/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+
+      <form id="contact-form" action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="birth-year">Birth Year:</label>
+        <input type="text" id="birth-year" name="birth-year"><br>
+        <p id="age-message"></p>
+
+        <p>Project Type:</p>
+        <input type="radio" id="voice" name="project" value="voice">
+        <label for="voice">Voice AI</label><br>
+        <input type="radio" id="scraping" name="project" value="scraping">
+        <label for="scraping">Web Scraping</label><br>
+        <input type="radio" id="automation" name="project" value="automation">
+        <label for="automation">Automation</label><br><br>
+
+        <input type="checkbox" id="consult" name="consult" value="yes">
+        <label for="consult">I want a free consult</label><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+
+        <label for="special-notes">Special Notes (max 100 characters):</label><br>
+        <textarea id="special-notes" name="special-notes" maxlength="100" rows="3" cols="30"></textarea>
+        <p id="char-count">100 characters remaining</p><br>
+
+        <button type="submit" id="send-btn">Send</button>
+      </form>
+
+      <p id="form-message"></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
